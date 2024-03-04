@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="shortcut icon" href="images/favicon.png">
+      <title>Growth Mission</title>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/select2.css" rel="stylesheet" />
+      <link href="css/niceCountryInput.css" rel="stylesheet" />
+      <link href="css/common.css" rel="stylesheet">
+      <link href="css/onboarding.css" rel="stylesheet">
+      <link href="css/onboarding-responsive.css" rel="stylesheet">
+   </head>
+   <body class="onboarding-bg">
+      <header class="onboarding-header">
+         <div class="header-logo"><a href=""><img src="images/white-logo.svg" alt=""></a></div>
+         <div class="logoutbtn">
+            <a class="mobile-logout-btn" href="login.html"><img src="images/user-logout-icon.svg" alt=""></a>
+         </div>
+      </header>
+      <div class="form-box-padding register-sec reg-cont-PTB">
+         <div class="container">
+            <div class="personal-det-sec personal-cont-width">
+               <div class="reg-title text-center">
+                  <h2>Confirm your company details</h2>
+                  <p>We need some additional details about your company too.</p>
+               </div>
+               <div class="formwhitebg form-secton">
+                  <div class="on-bording-form-part">
+                     <form class="items-center">
+                        <div class="row">
+                           <div class="col-md-12 mb-3">
+                              <label class="form-label">Company name</label>
+                              <div class="form-input-icon">
+                                 <!-- remove class "disable" for enable input box -->
+                                 <input type="text" class="form-control" disabled placeholder="Hourglass Inc.">
+                                 <div class="form-mes-icon desk-none"><a href=""><img src="images/edit-icon.svg" alt=""></a></div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 mb-3">
+                              <label class="form-label">Company email</label>
+                              <div class="form-input-icon">
+                                 <!-- remove class "disable" for enable input box -->
+                                 <input type="email" class="form-control" disabled placeholder="george@hourglass.com">
+                                 <div class="form-mes-icon desk-none"><a href=""><img src="images/edit-icon.svg" alt=""></a></div>
+                              </div>
+                           </div>
+                           <div class="col-md-12 mb-3">
+                              <label class="form-label">Company phone number</label>
+                              
+                                 <!-- remove class "disable" for enable input box -->
+                                 <div class="form-input-icon country-phone biginput-widht">
+                                    <div class="form-control disabled">
+                                       <div class="niceCountryInputSelector" data-selectedcountry="GB" data-showspecial="false" data-showflags="true" data-i18nall="All selected"
+                                       data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback">
+                                       <input type="tel" class="country-phonenumber" placeholder="" value="">
+                                       </div>
+                                    </div>
+                                    <div class="form-mes-icon desk-none"><a href=""><img src="images/edit-icon.svg" alt=""></a></div>
+                                 </div>
+                                 
+                              
+                           </div>
+                           <div class="col-md-12 mb-3">
+                              <label class="form-label">Website</label>
+                              <div class="form-input-icon">
+                                 <input type="text" class="form-control" placeholder="Enter your website">
+                              </div>
+                           </div>
+                           <div class="col-md-12 mb-3">
+                              <label class="form-label">Location</label>
+                              <div class="form-input-icon select-2-box">
+                                 <select class="js-example-basic-single js-states form-control">
+                                    <option>What country are you located in?</option>
+                                    <option>Location</option>
+                                  </select>
+                              </div>  
+                           </div>
+                           <div class="mb-3 mb-0 pt-2"><input class="btn btn-primary btn-full" type="submit" value="Next"></div>
+                        </div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="create-account-btn">
+            <div class="container">
+               <ul>
+                  <li>
+                     <span class="btn-checked">Create Account</span>
+                  </li>
+                  <li>
+                     <span class="btn-checked">Contact Details</span>
+                  </li>
+                  <li>
+                     <span class="active">Choose Plan</span>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <script src="js/jquery-3.7.1.min.js"></script> 
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/select2.js"></script>
+      <script src="js/niceCountryInputPhone.js"></script>
+       <script>
+         function onChangeCallback(ctr){
+             console.log("The country was changed: " + ctr);
+             //$("#selectionSpan").text(ctr);
+         }
+         $(document).ready(function () {
+             $(".niceCountryInputSelector").each(function(i,e){
+                 new NiceCountryInput(e).init();
+             });
+         });
+      </script>
+       
+       <script>
+          $('.js-example-basic-single').select2({
+          placeholder: 'Select an option',
+          minimumResultsForSearch: Infinity
+          });
+    </script>
+   </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <link rel="shortcut icon" href="images/favicon.png">
+      <title>Growth Mission</title>
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link href="css/niceCountryInput.css" rel="stylesheet" />
+      <link href="css/common.css" rel="stylesheet">
+      <link href="css/onboarding.css" rel="stylesheet">
+      <link href="css/onboarding-responsive.css" rel="stylesheet">
+   </head>
+   <body class="onboarding-bg">
+
+      <header class="onboarding-header">
+         <div class="login-author-name backtopage mob-none"><a href=""><img src="images/white-arrow-left.svg" alt=""> Back to previous step</a></div>
+         <div class="header-logo"><a href=""><img src="images/white-logo.svg" alt=""></a></div>
+         <div class="logoutbtn">
+            <a class="mobile-logout-btn" href="login.html"><img src="images/user-logout-icon.svg" alt=""></a>
+         </div>
+      </header>
+
+      <div class="form-box-padding register-sec">
+         <div class="container">
+            <div class="formwhitebg sm-box-width form-secton">
+               
+               <div class="form-title">
+                  <h3 class="ft-w-600">Your Company Details</h3>
+                  <p>Please enter your company details below. These details may be shared with your leads.</p>
+               </div>   
+               <div class="on-bording-form-part">
+                  <form class="items-center">
+                     
+                     <div class="mb-3">
+                        <label class="form-label">Company Name</label>
+                        <div class="form-input-icon">
+                           <input type="text" class="form-control" placeholder="Enter your company name">
+                        </div>
+                     </div>
+                      <div class="mb-3">
+                        <label class="form-label">Company Email address</label>
+                        <div class="form-input-icon">
+                           <input type="email" class="form-control" placeholder="Enter your company email address">
+                        </div>
+                     </div>
+                     <div class="mb-3">
+                        <label class="form-label">Company Phone number</label>
+                        <div class="form-input-icon country-phone">
+                           <div class="form-control">
+                              <div class="niceCountryInputSelector" data-selectedcountry="GB" data-showspecial="false" data-showflags="true" data-i18nall="All selected"
+                              data-i18nnofilter="No selection" data-i18nfilter="Filter" data-onchangecallback="onChangeCallback">
+                              <input type="tel" class="country-phonenumber" placeholder="" value="">
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="mb-3 mb-0 pt-2"><input class="btn btn-primary btn-full" type="submit" value="Continue"></div>
+                  </form>
+              </div>
+            </div>
+         </div>
+
+         <div class="create-account-btn">
+            <div class="container">
+               <ul>
+                  <li>
+                     <span class="btn-checked">Create Account</span>
+                  </li>
+                  <li>
+                     <span class="active">Contact Details</span>
+                  </li>
+                  <li>
+                     <span>Choose Plan</span>
+                  </li>
+               </ul>
+            </div>
+         </div>
+
+      </div>
+      <script src="js/jquery-3.7.1.min.js"></script> 
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/niceCountryInputPhone.js"></script>
+       <script>
+         function onChangeCallback(ctr){
+             console.log("The country was changed: " + ctr);
+             //$("#selectionSpan").text(ctr);
+         }
+         $(document).ready(function () {
+             $(".niceCountryInputSelector").each(function(i,e){
+                 new NiceCountryInput(e).init();
+             });
+         });
+      </script>
+   </body>
+</html>

@@ -1,0 +1,108 @@
+@media (max-width: 1599px) {
+   .info-box {padding-left: 15px; padding-right: 15px;}
+   .graphbox.boxborder {padding: 20px 15px;}
+   .graphbox .row {margin-left: -15px; margin-right: -15px;}
+   .graphbox .row > * {padding-left: 15px; padding-right: 15px;}
+}
+
+
+@media (max-width: 1299px) {
+
+}
+
+@media (max-width: 1199px) {
+   .navbar-icon {display: block;}
+   .dash-nav{ left: -322px; width: 322px; min-width: 322px;}
+   .dash-nav.mobile-show{ display: block; min-width: 322px; left: 0;}
+   .dash-app {margin-left: 0px;}
+   .comingsoon-page {padding: 32px 15px;}
+   .dass-midd-padd {padding: 11px 15px 32px 15px;}
+   .main-header .h-title  {padding-left: 27px;}
+   .cstmTable th, .cstmTable td {padding: 10px 15px;}
+   .notification-box {right: 15px;}
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px)
+{	
+	
+}
+
+@media (max-width: 1024px) {
+
+}
+
+@media (max-width: 991px) {
+
+   .setup-content br {display: none;}
+   .leads-main {margin-bottom: 20px;}
+   .middle-left-panel {margin-bottom: 30px;}
+   .camp-tab-acco-sec .tab-content>.tab-pane {display: block;  opacity: 1; } 
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{	
+	
+}
+
+@media (max-width: 767px) {
+
+   /*---- basic table -start--*/
+   table.bt tfoot th, table.bt tfoot td, table.bt tbody td {border: none;  display: flex; vertical-align: top;  float: left\9;  width: 100%\9;}
+   table.bt tfoot th::before,
+   table.bt tfoot td::before,
+   table.bt tbody td::before {  content: attr(data-th)"";  display: inline-block;  -webkit-flex-shrink: 0;  -ms-flex-shrink: 0;  flex-shrink: 0;
+   font-size: 14px;  font-weight: bold; padding: 8px;  width: 45%; max-width: 140px; background-color: #f1f1f1;  color: #000;}
+   table.bt tfoot th.bt-hide,table.bt tfoot td.bt-hide,table.bt tbody td.bt-hide {  display: none;}
+   table.bt tfoot th .bt-content,table.bt tfoot td .bt-content,table.bt tbody td .bt-content {  vertical-align: top;padding: 8px; border-bottom: 1px solid #EBEBED; width: 100%;}
+   table.bt tbody td:last-child .bt-content{border-bottom: none;}
+   .bt-wrapper.active {  max-height: 310px;  overflow: auto;  -webkit-overflow-scrolling: touch;}
+   table.bt.bt--no-header tfoot td::before,table.bt.bt--no-header tbody td::before {  display: none;}
+   .cstmTable th, .cstmTable td{padding: 0px 0px; font-size: 14px; word-break: break-word;}
+   .cstmTable tr{border:1px solid #EBEBED; margin-bottom: 0px; display: block; border-bottom: 3px solid #d5d5d5;}
+   td .bt-content{text-overflow: ellipsis; overflow: hidden; /*white-space: nowrap;*/}
+   .tablesection {border: none;}
+
+   /*---- basic table -end--*/
+
+   .select2-container--default .select2-selection--single .select2-selection__rendered {line-height: 36px;}
+   .select2-container--default .select2-selection--single .select2-selection__arrow {height: 38px;}
+   .select2-container .select2-selection--single {height: 38px;}
+   .select-2-box {font-size: 12px;}
+
+   .switch-box {left: 15px; right: 15px;  width: auto;}
+   .support-main {left: 15px; right: 15px; bottom: 15px; margin: auto; width: auto; height: auto;} 
+   .suggestion-box a {flex-direction: column; align-items: flex-start;}
+   .suggesstion-con {margin-bottom: 7px;}
+   .tablesection .text-end {text-align: left !important;}
+   .graph-exp-sec .camp-search {width: 100%; margin-bottom: 5px;}   
+   .graph-exp-sec .camp-search input {width: 100%;}
+   .camp-filterbtn {display: flex; justify-content: space-between; align-items: center; width: 100%; flex-wrap: wrap;}
+   .main-header {margin-bottom: 10px;}
+   .header-col {margin-bottom: 10px;}
+   .navigations-section {padding-left: 10px; padding-right: 10px;}
+   .graph-tabs {order: 1;}
+   .graph-tabs ul {margin-bottom: 0px !important;}
+   .graph-exp-sec {margin-bottom: 10px;}
+   .userprofile-logout {  bottom: 80px; right: 0; left: initial;}
+
+}
+
+@media (max-width: 575px) {
+
+}
+
+@media (max-width: 479px) {
+	
+
+}
+
+@media (max-width: 360px) {
+
+	.dash-nav{min-width: 280px; width: 280px; left: -280px;}
+   .dash-nav.mobile-show{min-width: 280px;}
+   .navbar-icon {right: -36px;}
+
+}
+	
+img {max-width: 100%; height: auto;}

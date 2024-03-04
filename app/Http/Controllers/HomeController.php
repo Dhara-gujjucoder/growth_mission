@@ -71,22 +71,27 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function customerlogin()
+    public function login()
     {      
         return view('login');
     }
 
-    public function customerHome()
+    public function customerHome(Request $request)
     {
-        $user = Auth::user();
-        if ($user->status != 0) {
-            auth()->logout();
-            return redirect()->route('login')->withErrors(['status' => 'Your account is deactivated,Contact to administration.']);
-        }
-        if ($user->block != 0) {
-            auth()->logout();
-            return redirect()->route('login')->withErrors(['status' => 'Your account is blocked,Contact to administration.']);
-        }
-        return view('dashboard');
+        // $request->session()->put("step11", $request->all());
+         $user = Auth::user();
+        // if ($user->status != 0) {
+        //     // dd('d');
+        //     auth()->logout();
+        //     return redirect()->route('login')->withErrors(['status' => 'Your account is deactivated,Contact to administration.']);
+        // }
+        // if ($user->block != 0) {
+        //     auth()->logout();
+        //     return redirect()->route('login')->withErrors(['status' => 'Your account is blocked,Contact to administration.']);
+        // }
+        return view('customer.dashboard');
     }
+
+
+    
 }

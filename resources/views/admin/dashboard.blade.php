@@ -1,22 +1,14 @@
-@extends('layouts.app')
-  
+@extends('layouts.admin')
+
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Admin Dashboard') }}</div>
-  
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-                    You are a Admin.
-                </div>
-                <a href="{{ url('/logout') }}"> logout </a>
+    <div class="dass-midd-padd comingsoon-page">
+
+        <div class="setup-comingsoon">
+            <div class="setup-content">
+                <img src="{{ asset('staff/images/haze-hourglass-icon.svg') }}" alt="">
+                <h3>Coming Soon</h3>
+                <p>This feature is coming soon - our <br>development team are working on <br>delivering it asap</p>
+            </div>
         </div>
     </div>
-</div>
 @endsection

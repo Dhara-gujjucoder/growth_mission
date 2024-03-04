@@ -24,7 +24,9 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers {
+        logout as performLogout;
+    }
 
     /**
      * Where to redirect users after login.
@@ -54,7 +56,7 @@ class LoginController extends Controller
             'email' => 'required|email',
             'password' => 'required',
         ]);
-        if (auth()->attempt(array('email' => $request['email'], 'password' => $request['password']))){
+        if (auth()->attempt(array('email' => $request['email'], 'password' => $request['password']), $request->has('remember'))){
             $user = auth()->user();
             if ($user->type == 'admin') {
                 return redirect()->route('admin.dashboard');
@@ -68,10 +70,10 @@ class LoginController extends Controller
         }
     }
 
-    public function logout(Request $request): RedirectResponse
+    public function logout(Request $request)
     {
-        auth()->logout();
-        return redirect('/');
+        $this->performLogout($request);
+        return redirect()->to('/');
     }
 
 }

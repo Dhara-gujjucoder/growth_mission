@@ -23,7 +23,7 @@
                   <p>These are the details you will use to access our system and view your leads going forward.</p>
                </div>   
                <div class="on-bording-form-part">
-                  <form class="items-center" method="POST" action="" id="registration-form">
+                  <form class="items-center" method="POST" action="{{ route('register') }}" id="registration-form">
                   @csrf
                       <div class="mb-3">
                         <label class="form-label">Email Address</label>
@@ -34,15 +34,15 @@
                       <div class="mb-3">
                         <label class="form-label">Password</label>
                         <div class="form-input-icon">
-                           <input type="password" name="password" class="form-control" placeholder="Enter password">
-                           <div class="form-mes-icon desk-none"><a href=""><img src="images/eye-icon.svg" alt=""></a></div>
+                           <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
+                           <div class="form-mes-icon desk-none toggle-password" toggle="#password"><img src="images/eye-icon.svg" alt=""></div>
                         </div>
                      </div>
                      <div class="mb-3">
                         <label class="form-label">Confirm Password</label>
                         <div class="form-input-icon">
                            <input type="password" name="c_password" class="form-control" placeholder="Enter password">
-                           <div class="form-mes-icon desk-none"><a href=""><img src="images/eye-icon.svg" alt=""></a></div>
+                           {{-- <div class="form-mes-icon desk-none"><a href=""><img src="images/eye-icon.svg" alt=""></a></div> --}}
                         </div>
                      </div>
                      

@@ -37,14 +37,14 @@
                         <div class="mb-3">
                             <label class="form-label">Password</label>
                             <div class="form-input-icon">
-                                <input type="password" class="form-control" name="password" placeholder="Enter your password" autocomplete="current-password">
-                                <div class="form-mes-icon"><a href=""><img src="images/eye-icon.svg" alt=""></a></div>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter your password" autocomplete="current-password">
+                                <div class="form-mes-icon toggle-password" toggle="#password"><img src="images/eye-icon.svg" alt=""></div>
                             </div>
                         </div>
                         <div class="d-flex align-items-center justify-content-between">
                             <div class="mb-3">
                                 <div class="form-check">
-                                    <input id="remember-checkbox" class="form-check-input" type="checkbox">
+                                    <input id="remember-checkbox" class="form-check-input" type="checkbox" name="remember" value="1">
                                     <label for="remember-checkbox" class="form-label form-check-label opacity-70">Remember
                                         for 30 days</label>
                                 </div>
